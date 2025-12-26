@@ -82,7 +82,7 @@ def extract_user_intent(user_input: str):
             ],
             # 提示：DeepSeek 支持 JSON Mode
             response_format={"type": "json_object"}, 
-            temperature=0.7 #0.1->0.0
+            temperature=0.0 #0.1->0.0
         )
         content = response.choices[0].message.content
         # 容错处理：DeepSeek 偶尔会返回 Markdown 代码块
